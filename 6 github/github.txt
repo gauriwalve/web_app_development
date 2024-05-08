@@ -1,0 +1,31 @@
+1)go to google write git.com
+2)if you have account go on aalready have account --> enter your email and password-->sign in-->logout all the already open git hub accounts
+3)go to NEW Button --> write repository name -->wad_practicle
+					     -->click public
+                   			     -->create repository-->(reporitory is created wad_practicle)
+
+4) Go to visual studio -->write any html code which we want to push on github-->save the file(index.html) in any folder(practice) and save on desktop
+5)write click on that folder and click on open in terminal
+6)terminal is open as ~/Desktop/practice-->
+7)write command $ git init
+8)$ git add --a
+9)$ git commit -m "this is my html page"
+10)$ git remote add origin https://github.........##(go to github copy that https://github link and paste here).
+11)$ git config --global user.email "rumanepriti2003@gmail.com"
+12)$ git push -u origin master  
+13)after it ask for username#(write our github username)
+14) ask for password-->go to github-->go to setting-->scroll down-->developer setting
+		    -->	personal access token-->Tokens(classic)
+		    -->go to generate new token-->Generate new token(classic)click that	
+		    -->Note(give any name for token(wad_practicle))-->select all checkboxes-->generate token
+	            -->copy that token and paste on the password field in terminal -->enter
+
+
+15)then if it gives any authentication error then write-->$ git remote remove origin 
+write this commands again 12)$ git remote add origin https://github.........##(go to github copy that https://github link and paste here).
+16)$ git config --global user.email "rumanepriti2003@gmail.com"
+17)$ git push -u origin master   
+18)after it ask for username#(write our github username)
+19) ask for password-->paste token which we will copy
+20)if it gives all are up to date then go to github-->our profile-->repository-->wad_practicle
+

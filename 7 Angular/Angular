@@ -1,0 +1,67 @@
+Create an Angular application which will do following actions:Register User,Login User,Show User Data on Profile Component
+
+-> open visual studio 
+-> Create one folder 
+-> open new Terminal : 
+	1) npm --version (verify whether NodeJs install or not)
+	2) ng install -g @angular/cli@latest (if Angular not install)
+	3) ng new assignment4 -> press y -> CSS
+-> open assignment4 -> src -> app
+-> open app.component.html file 
+-> erase all code 
+-> Write code......
+
+	<h1>{{title}}</h1>
+	<label>Name &nbsp;<input type="text" #name placeholder="Enter your Name" name="Name"></label><br>
+	<label>Address &nbsp;<input type="text" #address placeholder="Enter your Address" name="Address"></label><br>
+	<label>Contact number &nbsp;<input type="text" #contact placeholder="Enter your Contact No" name="Contact"></label><br>
+	<label>Email &nbsp;<input type="email" #email placeholder="Enter your Email Id" name="Email"></label><br>
+	<label>Password &nbsp;<input type="password" #password placeholder="Enter your Password" name="Password"></label><br>
+	<button (click)="getvalue(name.value, address.value, contact.value, email.value)">Register</button>
+	<h1> Your Registered Data</h1>
+
+	<p>Name:{{displayname}}</p>
+	<p>Address:{{displayaddress}}</p>
+	<p>Contact:{{displaycontact}}</p>
+	<p>Email:{{displayemail}}</p>
+
+-> Save the file
+-> open app.component.ts file
+-> Write code.....
+
+	import { Component } from '@angular/core';
+
+	@Component({
+  	selector: 'app-root',
+  	templateUrl: './app.component.html',
+  	styleUrl: './app.component.css'
+	})
+	export class AppComponent {
+  	title = 'Registration Form';
+  
+ 	displayname='';
+  	displayaddress='';
+  	displaycontact='';
+  	displayemail='';
+
+  	getvalue(name:string, address:string, contact:string, email:string){
+    	this.displayname=name;
+    	this.displayaddress=address;
+    	this.displaycontact=contact;
+    	this.displayemail=email;
+  	}
+	}
+	
+-> Save the file
+-> open app.component.css file
+-> write CSS code...
+	input{
+    	width: 400px;
+    	height: 25px;
+    	margin: 10px;
+    	padding: 5px;
+	}
+-> Save the file
+-> open Terminal -> change path (cd assignment4) -> ng serve -> press y
+-> open Browser -> localhost:4200
+
